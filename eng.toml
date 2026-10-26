@@ -1,0 +1,36 @@
+[n]
+slots = ['stem', 'number']
+[n.number.tags]
+sg = '[SG]'
+pl = '-PL'
+[[n.number.exceptions]]
+stems = ['fish', 'sheep']
+pl = '[PL]'
+
+[vblex]
+slots = ['stem', 'tense', 'person', 'number']
+[tense.tags]
+inf = '[INF]'
+ger = '-GER'
+pri = '[PRES]'
+[vblex.person.tags]
+# default to nothing
+[[vblex.person.exceptions]]
+contexts = [{tags = 'pri.sg'}]
+p3 = '-3'
+[vblex.number.tags]
+# default to nothing
+contexts = [{tags = 'pri.p3'}]
+sg = 'SG'
+
+[vbdo]
+slots = ['stem', 'tense']
+
+[vbdo.pri]
+slots = ['stem', 'tense', 'person', 'number']
+
+[vbdo.pri.person.tags]
+p3 = '-3'
+
+[vbdo.pri.number.tags]
+sg = 'SG'
